@@ -33,8 +33,6 @@ main {
 }
 
 .navbar {
-  width: 5rem;
-  height: 100vh;
   position: fixed;
   background-color: var(--bg-primary);
   transition: width 200ms ease;
@@ -84,14 +82,6 @@ main {
   margin: 0 1.5rem;
 }
 
-.navbar:hover {
-  width: 16rem;
-}
-
-.navbar:hover .link-text {
-  display: block;
-}
-
 .fa-primary {
   color: #ff7eee;
 }
@@ -124,4 +114,21 @@ main {
 
 .navbar:hover .logo svg {
   transform: rotate(-180deg);
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+    transition: opacity var(--transition-speed);
+  }
 }
